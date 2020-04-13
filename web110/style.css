@@ -1,0 +1,17 @@
+#body {
+    background-color: #D71B1B;
+}
+
+#h1 {
+    color: white;
+}
+
+#p {
+    text-align: center;
+    color: white;
+    font-size: 14px;
+}
+
+#ul {
+    font-weight: bold;
+}
