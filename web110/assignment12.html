@@ -2,15 +2,28 @@
 <html>
     <head>
         <link rel="stylesheet" type="text/css" href="style.css" />
-        <p id = "name"></p>
+        <h1 id = "name"></h1>
         <script>
             document.getElementById("name").innerHTML = "Brian Kuk";
         </script>
     </head>
     <body>
-        <p id = "date"> Blah Blah Blah </p>
+        <p id = "para"></p>
         <script>
-            document.getElementByID("date").innerHTML = Date();
+            var d = new Date();
+            document.getElementById("para").innerHTML = d;
+        </script>
+
+        <canvas id="nameCanvas" width="360" height="240"></canvas>
+        <script>
+            var nameCanvas = document.getElementById("canvasName");
+            var stuff = nameCanvas.getContext("2d");
+
+            stuff.fillStyle = "white";
+            
+            stuff.font ="25px Ariel"
+            stuff.fillText("Brian Kuk", 10, 10)
+
         </script>
     </body>
 
