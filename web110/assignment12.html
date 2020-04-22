@@ -8,23 +8,34 @@
         </script>
     </head>
     <body>
-        <p id = "para"></p>
+        <p id = "time"></p>
         <script>
             var d = new Date();
-            document.getElementById("para").innerHTML = d;
+            document.getElementById("time").innerHTML = d;
         </script>
 
-        <canvas id="nameCanvas" width="360" height="240"></canvas>
+        <canvas id="nameCanvas" width="200" height="100" style="border:1px solid black"></canvas>
         <script>
-            var nameCanvas = document.getElementById("canvasName");
-            var stuff = nameCanvas.getContext("2d");
-
-            stuff.fillStyle = "white";
-            
-            stuff.font ="25px Ariel"
-            stuff.fillText("Brian Kuk", 10, 10)
-
+            var canvasName = document.getElementById("nameCanvas");
+            var cn = canvasName.getContext("2d");
+            cn.font ="30px Ariel";
+            cn.fillText("Brian Kuk", 10, 50);
         </script>
-    </body>
 
+        <canvas id="shape" width="600" height="300" style="border:1px solid black"></canvas>
+        <script>
+            var makeShape = document.getElementById("shape");
+            var cs = makeShape.getContext("2d");
+            cs.beginPath();
+            cs.arc(150, 150, 50, 0, 2*Math.PI);
+            cs.stroke();
+
+            cs. beginPath();
+            cs.fillRect(450, 110, 70, 70);
+            cs.close.Path();
+        </script>
+
+        <p>Javascript, unlike HTML or CSS, is a high-level interpreted programming language. It is one of the three core languages of web pages, along with HTML and CSS. This week, we focused on an introduction to Javascript and some introduction activities along with it. What makes Javascript so different is that it deals with the functionality of web pages and making them interactive. For example, we can use Javascript to place an image and add a slideshow feature so that every time the user clicks, the picture will move onto the next one. With this in mind, the activities asked us to use a few beginner level functions to add to our websites. One of the activities contained links to Codeacademy and W3Schools, websites that I am very familiar with already. W3Schools does a great job in introducing topics and will give great looking examples for each of them. For example, when I had trouble placing in shapes at first. The examples in the Wikiversity were a bit confusing, and there were not many labels or an output view. On W3Schools, the examples will walk you through what everything does. I had no idea that the first two numbers when creating a shape had to do with the position, relative to the canvas that it is being drawn on. My main takeaway from this activity was to understand basic Javascript function and to just be careful when writing code. My date and time were not working at first. I thought I had written it exactly as I should have, but after reviewing it I had an unwanted capitalized letter. This made it so that this function would not even work. It goes to show that an indent, extra letter, spelling error, and many other mistakes will affect the code in many different ways.</p>
+
+    </body>
 </html>
